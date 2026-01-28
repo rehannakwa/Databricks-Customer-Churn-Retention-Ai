@@ -34,7 +34,9 @@ Customer churn has a direct impact on revenue, but identifying **which customers
 
 ## 🏗️ Architecture Overview
 
-**Architecture Diagram** *(to be added)*
+**Architecture Diagram**
+
+![Architecture Diagram](Screenshots/Architecture.png)
 
 The solution is built on **Databricks** using:
 - Unity Catalog  
@@ -48,14 +50,15 @@ The solution is built on **Databricks** using:
 
 **Medallion Tables**
 
+![Medallion Architecture](Screenshots/medallion_tables.png)
+
 ### 🔹 Bronze Layer
 - Raw customer churn data  
 - Ingested from a Unity Catalog managed volume  
 - Stored as Delta tables  
 
-**Table**
-ecommerce_ai.bronze.customer_churn_raw
-
+> 🧾 **Table:**  
+> `ecommerce_ai.bronze.customer_churn_raw`
 
 
 ---
@@ -65,21 +68,22 @@ ecommerce_ai.bronze.customer_churn_raw
 - Missing value handling  
 - Data type standardization  
 
-**Table:**
-ecommerce_ai.silver.customer_churn_clean
+> 🧾 **Table Name**  
+> `ecommerce_ai.silver.customer_churn_clean`
+
 
 
 ---
 
 ### 🔹 Gold Layer
 - Feature-engineered ML dataset  
-- Churn scores and retention recommendations
+- Churn scores and retention recommendations  
 - Analytics-ready tables  
 
-**Tables:**
-ecommerce_ai.gold.customer_features,
-ecommerce_ai.gold.customer_churn_scores,
-ecommerce_ai.gold.retention_recommendations,
+> 🧾 **Table Names**  
+> `ecommerce_ai.gold.customer_features`  
+> `ecommerce_ai.gold.customer_churn_scores`  
+> `ecommerce_ai.gold.retention_recommendations`
 
 
 
@@ -117,7 +121,9 @@ These features capture **behavioral, engagement, and value-based churn signals**
 
 ## 🤖 Model Training & MLflow Tracking
 
-**MLflow Run** *(to be added)*
+**MLflow Run**
+
+![MLflow Run](Screenshots/mlflow_run.png)
 
 - **Model:** Logistic Regression  
 - **Reasoning:** Interpretable, baseline-friendly, business-explainable  
@@ -150,21 +156,29 @@ The system goes beyond prediction by converting churn probabilities into **busin
 ## 📊 Business Dashboard (Databricks SQL)
 
 ### 🔹 Churn Risk Distribution
+![Churn Risk Dashboard](Screenshots/dashboard_churn_risk.png)
+
 Displays the distribution of churn risk across customers.
 
+---
+
 ### 🔹 Retention Actions Required
+![Retention Actions Dashboard](Screenshots/dashboard_retention_actions.png)
+
 Shows how many customers require each AI-recommended retention action.
 
+---
+
 ### 🔹 Top High-Risk Customers
+![Top Customers Dashboard](Screenshots/dashboard_top_customers.png)
+
 Ranks customers by priority score to support targeted retention efforts.
 
 ---
 
 ## 🔁 End-to-End Workflow & Orchestration
 
-**Databricks Job** *(to be added)*
-
-The pipeline supports automation using Databricks Jobs:
+The pipeline supports automation using **Databricks Jobs**:
 - Data ingestion  
 - Feature engineering  
 - Model training  
