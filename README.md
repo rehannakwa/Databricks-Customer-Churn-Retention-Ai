@@ -219,7 +219,7 @@ The pipeline supports automation using **Databricks Jobs**:
 
 ## 🔗 Links
 - **GitHub Repository:** https://github.com/rehannakwa/Databricks-Customer-Churn-Retention-Ai  
-- **LinkedIn Post (Final Submission):** To be added  
+- **LinkedIn Post :**   https://www.linkedin.com/posts/rehan-nakwa_completed-end-to-end-databricks-data-ugcPost-7422229365641338880-BTkf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1-UDoBvcXVpDI21zkseSmYNysGGWdGFmw
 
 ---
 
